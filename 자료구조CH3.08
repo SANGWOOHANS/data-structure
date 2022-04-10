@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void insert(int n, int loc, int value){
+    int i = 0 , k = 0;
+    int array[n];
+    for (k = 0; k < n; k++) {
+        printf("%d ",array[k]);
+    }
+    printf("\n");
+    for (i = n; i > loc; i--) {
+        array[i-1] = array[i-2];
+    }
+    array[loc] = value;
+    for (k = 0; k < n; k++) {
+        printf("%d ",array[k]);
+    }
+}
+
+int main(void){
+    insert(5, 2, 12);
+}
